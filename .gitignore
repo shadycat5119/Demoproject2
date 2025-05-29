@@ -1,0 +1,8 @@
+.env
+__pycache__/
+.DS_Store
+LASTGENERATEDREPORT.md
+reports_generated/ERNSTANDYOUNGSAMPLEREPORT.md
+reports_generated/kanini_report.md
+reports_generated/kaninisamp.md
+reports_generated/KANINISAMPLEREPORT.md

@@ -1,0 +1,48 @@
+financial_data_researcher_task:
+  description: >
+    First search google for websites containing most amount of financial information about {company}. Keep in mind that the date is 30th March and year is 2025.
+    Take the top 30 websites that has most amount of financial information about {company} and scrape them.
+    suggested places to look for: Bloomberg, glassdoor, linkedin, moneycontrol.
+  expected_output: >
+    All relevant financial information found about {company} in said websites.
+  agent: financial_data_researcher
+
+news_data_researcher_task:
+  description: >
+    Use google search to find latest news about {company}, keeping in mind year is 2025 and date is 30th march.
+    Collect the top 30 website that have news and developmetns about {company}
+    Scrape them to obtain relevant news about the company {company}
+    Suggested places to look for: bloomberg, glassdoor, linkedin, moneycontrol.
+  expected_output: >
+    All latest news found about the company {company}
+  agent: news_data_researcher
+
+social_media_researcher_task:
+  description: >
+    search google for the social media in which the company {company} is available in.
+    Scrape them to get the names andcontact details of all the top level employees of the company {company}, all the chiefs, up to the.
+    Also scrape any public announcements, contact points, affiliations. Keeping in mind year is 2025 and date is 30th march.
+  expected_output: >
+    The names and contact details of the executive team of the company {company}
+    Major public announcements and board affiliations.
+  agent: social_media_researcher
+
+validity_analyst_task:
+  description: >
+    cross check and make sure all the obtained data is up to date and valid.
+    Analyse the strengths and weakness of the company. See all the fields they are present in and how well theyre doing in it.
+  expected_output: >
+   let all data pass through, flag unverified data as unverified and false information as fact check required.
+   Make a list of all the strengths and weaknesses you have collected, along with all the fields they are presesnt in and how they are performing in them.
+  agent: validity_analyst
+
+report_writer_task:
+  description: >
+    Compile all **verified** data into a **structured and detailed markdown report** named **LASTGENERATEDREPORT.md**.
+    Format the report clearly, ensuring:
+    - **Financial data is concise but comprehensive.**
+    - **News insights are properly summarized (not raw articles).**
+    - **Executive profiles include relevant details (not just names).**
+  expected_output: >
+   comprehensive report with everything sorted and neatly arranged.
+  agent: report_writer
